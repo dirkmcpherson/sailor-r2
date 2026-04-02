@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sailor-r2"
+version = "0.1.0"
+description = "SAILOR with R2-Dreamer world model"
+requires-python = ">=3.10"
+dependencies = [
+    "r2dreamer",
+    "torch>=2.0",
+    "einops>=0.3",
+    "numpy>=1.26",
+    "termcolor",
+    "ruamel.yaml>=0.17",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+envs = [
+    "gymnasium>=1.0",
+    "mani_skill",
+    "robomimic",
+]
+
+[tool.setuptools]
+packages = ["sailor_r2", "sailor_r2.policies", "sailor_r2.classes"]
