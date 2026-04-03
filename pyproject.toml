@@ -24,6 +24,7 @@ dependencies = [
     "hydra-core",
     "diffusers>=0.25",
     "wandb",
+    "timm>=0.9",
     "r3m @ git+https://github.com/facebookresearch/r3m.git@b2334e726887fa0206962d7984c69c5fb09cceab",
 ]
 
