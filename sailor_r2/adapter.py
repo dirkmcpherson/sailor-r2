@@ -8,7 +8,7 @@ so that SAILOR's MPPI planner, value training, and static_scan work unchanged.
 import torch
 from torch import nn
 
-from r2dreamer import RSSM
+from .r2d import RSSM
 
 
 class RSSMAdapter(nn.Module):

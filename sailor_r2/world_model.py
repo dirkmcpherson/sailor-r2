@@ -9,8 +9,8 @@ import torch
 import torch.nn as nn
 from omegaconf import OmegaConf
 
-from r2dreamer import RSSM, MLPHead, MultiDecoder, MultiEncoder, Projector
-from r2dreamer import LaProp, clip_grad_agc_
+from .r2d import RSSM, MLPHead, MultiDecoder, MultiEncoder, Projector
+from .r2d import LaProp, clip_grad_agc_
 
 from .adapter import RSSMAdapter
 from .discriminator import Discriminator

@@ -8,21 +8,32 @@ version = "0.1.0"
 description = "SAILOR with R2-Dreamer world model"
 requires-python = ">=3.10"
 dependencies = [
-    "r2dreamer",
     "torch>=2.0",
     "einops>=0.3",
     "numpy>=1.26",
     "termcolor",
     "ruamel.yaml>=0.17",
     "tqdm",
+    "h5py",
+    "opencv-python",
+    "imageio",
+    "matplotlib",
+    "scipy",
+    "pandas",
+    "omegaconf",
+    "hydra-core",
+    "diffusers>=0.25",
+    "wandb",
+    "r3m @ git+https://github.com/facebookresearch/r3m.git@b2334e726887fa0206962d7984c69c5fb09cceab",
 ]
 
 [project.optional-dependencies]
 envs = [
     "gymnasium>=1.0",
     "mani_skill",
-    "robomimic",
+    "gym-hil",
+    "gym-pusht",
 ]
 
 [tool.setuptools]
-packages = ["sailor_r2", "sailor_r2.policies", "sailor_r2.classes"]
+packages = ["sailor_r2", "sailor_r2.policies", "sailor_r2.classes", "sailor_r2.r2d", "sailor_r2.r2d.optim"]

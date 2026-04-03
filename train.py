@@ -22,6 +22,12 @@ _sailor_root = os.environ.get(
 if os.path.isdir(_sailor_root) and _sailor_root not in sys.path:
     sys.path.insert(0, _sailor_root)
 
+# SAILOR's train_sailor.py adds sailor/diffusion to sys.path relative to CWD,
+# which won't work when CWD is sailor-r2. Add it explicitly here.
+_diffusion_path = os.path.join(_sailor_root, "sailor", "diffusion")
+if os.path.isdir(_diffusion_path) and _diffusion_path not in sys.path:
+    sys.path.insert(0, _diffusion_path)
+
 # Monkey-patch SAILOR's SAILORTrainer before it gets imported by train_sailor.py
 import sailor.sailor_trainer as _st
 from sailor_r2.sailor_trainer import SAILORTrainer

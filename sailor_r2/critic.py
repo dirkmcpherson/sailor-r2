@@ -9,7 +9,7 @@ import torch
 import torch.nn as nn
 from omegaconf import OmegaConf
 
-from r2dreamer import MLPHead
+from .r2d import MLPHead
 
 
 class DistributionalCriticEnsemble(nn.Module):
